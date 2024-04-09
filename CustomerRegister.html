@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Customer Register Page</title>
+    <link rel="stylesheet" href="style1.css">
+    <script src="https://kit.fontawesome.com/6c8ec86cca.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <div class="container" id="popmain">
+        <h1>Welcome to AltF4riends<br>Restaurant</h1>
+        <button type="submit" onclick="openLogin()">Register</button>
+    </div>
+
+
+    <div class="container_login" id="popuplog">
+        <form action="InsertCustomer_CR.php" method="POST" onsubmit="validateForm()">
+            <p class="labels">Name: </p>
+            <input type="text" id="ctname" name="cName" placeholder="Enter your Name">
+            <p class="labels">Phone: </p>
+            <input type="text" id="ctphoneno" name="cPhoneN" placeholder="Enter your Phone Number">
+            <p class="labels">Email: </p>
+            <input type="email" id="ctemail" name="cEmail" placeholder="Enter your Email">
+            <p class="labels">People Amount: </p>
+            <input type="number" id="ctAmount" name="cAmt" placeholder="Enter the amount of people you came along with">
+            <div class="sub-btn">
+                <button type="submit" id="log-btn">Register</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
+<script src="JS/registerCustomer.js"></script>

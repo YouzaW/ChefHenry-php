@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family:sans-serif; 
+}
+
+.menu{
+    position: relative;
+    width: 100%;
+    background: rgba(0, 0, 0, .9);
+    height: 100vh;
+    font-size: 120%;
+
+}
+
+.content{
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    color: #fff;
+    text-align: center;
+}
+
+.content h1 {
+    font-size: 50px;
+}
+
+
+.content p{
+    padding: 0px 50px;
+    font-size: 20px;
+}
+
+.overlay{
+    background: rgba(0, 0, 0, .9);
+    
+}
+
+button
+{
+    background-color:#000;
+    border: 1px solid #DD5B45;
+    color: #DD5B45;
+    font-size: 28px;
+    padding: 15px 45px;
+    border-radius: 15px;
+    font-weight: 700;
+    transition: 0.5s all ease;
+    margin-top: 20px;
+}
+
+button:hover{
+    background: #DD5B45;
+    color: #000;
+    transform: scale(1.05);
+     
+}
+
+button a
+{
+    text-decoration: none;
+    color: #ededed;
+}
+
+
+
+nav{
+
+    display: flex;
+    width: 84%;
+    margin: auto;
+    padding: 20px 0;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+    
+}
+
+nav ul li a{
+    display: inline-block;
+    color:white ;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+}
+
+nav ul li a:hover{
+   color: coral;
+}

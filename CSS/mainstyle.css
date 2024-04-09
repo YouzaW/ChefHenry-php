@@ -1,0 +1,306 @@
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: "Lato", sans-serif;
+    margin: 0;
+    background-image: url('images/Background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.menu{
+  position: relative;
+  width: 100%;
+  font-size: 120%;
+
+}
+
+
+
+nav{
+
+  display: flex;
+  width: 84%;
+  margin: auto;
+  padding: 20px 0;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav ul li {
+  display: inline-block;
+  list-style: none;
+  margin: 10px 20px;
+  
+}
+
+nav ul li a{
+  display: inline-block;
+  color:white ;
+  font-weight: bold;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  
+}
+
+nav ul li a:hover{
+ color: coral;
+}
+
+
+
+.container {
+  perspective: 1000px;
+  margin-bottom: 30px;
+  width: 80%;
+}
+
+.seat-image {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+img {
+  margin-top: -10px;
+}
+
+.seat-image.selected {
+  background-color: green;
+}
+
+.seat-image.sold {
+  background-color: #fff;
+}
+
+.seat-image:nth-of-type(2) {
+  margin-right: 30px;
+}
+
+.seat-image:nth-last-of-type(2) {
+  margin-left: 30px;
+}
+
+.seat-image:not(.sold):hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+.showcase .seat-image:not(.sold):hover {
+  cursor: default;
+  transform: scale(1);
+}
+
+.showcase {
+  background: rgba(0, 0, 0, 0.1);
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: #fff;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.showcase li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 10px;
+}
+
+.showcase li small {
+  margin-left: 2px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+  grid-gap: 30px;
+  justify-items: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.screen {
+  background-color: #fff;
+  height: 120px;
+  width: 100%;
+  margin: 15px 0;
+  transform: rotateX(-48deg);
+  box-shadow: 0 3px 10px rgba(255, 255, 255, 0.7);
+}
+
+p.text {
+    color:whitesmoke;
+    margin: 5px 0;
+}
+
+p.text span {
+  color:aqua;
+}
+
+#entrance {
+    margin: 10hw;
+    height: 8vh;
+    width: 10vw;
+    background-color: coral;
+    border: 2px solid black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+#counter {
+    margin: 10hw;
+    height: 8vh;
+    width: 24vw;
+    background-color: coral;
+    border: 2px solid black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+button {
+  all: unset;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust the transparency here */
+    z-index: -1;
+}
+
+
+#popupContainer {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    overflow: auto;
+    padding: 50px 0;
+    z-index: 9999;
+}
+
+#popupContent {
+    position: relative;
+    top: 50%;
+    left: 15%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    max-width: 500px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 15px;
+    text-align: center;
+    margin: 0 auto;
+    overflow-y: auto;
+    /* Enable vertical scrolling */
+    max-height: 80vh;
+}
+
+#orderdetailscontainer {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    overflow: auto;
+    /* Add overflow property */
+    padding: 50px 0;
+    /* Add padding to create space for the scroll bar */
+}
+
+#orderdetailcontent {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    text-align: center;
+}
+
+#closeBtn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#nextBtn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: blue;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.menu-item img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-right: 10px;
+    box-shadow: 3px 5px 5px 2px rgb(0, 0, 0, 0.5);
+}
+
+.menu-item-details {
+    text-align: left;
+}
+
+.menu-item-details h3 {
+    margin: 0;
+}
+
+.menu-item-details input {
+    flex-wrap: wrap;
+    margin: 0;
+}
+
+#orderdetailscontainer {
+  position: absolute;
+  z-index: 2;
+}

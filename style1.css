@@ -1,0 +1,202 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    background-image: url(images/back.jpg);
+    background-size: cover;
+    background-position: initial;
+    background-repeat: no-repeat;
+}
+
+.container {
+    text-align: center;
+    width: 30%;
+    height: 37vh;
+    position: absolute;
+    background-color: #000;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    padding: 7vw 0 0 0;
+    border-radius: 2em;
+    box-shadow: 5px 5px 5px 2px rgb(0, 0, 0, 0.5);
+    transition: transform 0.4s;
+    visibility: visible;
+}
+
+.container_login {
+    width: 30%;
+    height: auto;
+    position: absolute;
+    background-color: #000;
+    color: #fff;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.1);
+    box-sizing: border-box;
+    padding: 120px 120px 50px 120px;
+    border-radius: 2em;
+    box-shadow: 5px 5px 5px 2px rgb(0, 0, 0, 0.5);
+    visibility: hidden;
+    transition: transform 0.4s;
+}
+
+.container button {
+    width: 70%;
+    background-color: #000;
+    border: 2px solid #DD5B45;
+    font-weight: bold;
+    padding: 20px 50px;
+    outline: none;
+    border: 0;
+    color: #DD5B45;
+    border-radius: 0.6em;
+    font-size: 32px;
+    margin: 15px 0;
+    cursor: pointer;
+    left: 50%;
+    border: 2px solid #DD5B45;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.container button:hover {
+    transform: scale(1.05);
+    background-color: #DD5B45;
+    color: #000;
+}
+
+.container_login button {
+    width: 70%;
+    background-color: rgb(195, 94, 7);
+    padding: 20px 50px;
+    outline: none;
+    border: 0;
+    border-radius: 0.2em;
+    font-size: 32px;
+    margin: 15px 0;
+    cursor: pointer;
+    left: 50%;
+}
+
+.img_container {
+    font-size: 70px;
+    display: flex;
+    background-color: #fff;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -100px;
+    left: calc(50% - 100px);
+    box-shadow: 0 3px 7px rgb(255, 255, 255);
+}
+
+h1 {
+    text-align: center;
+    font-size: 40px;
+    padding: 0 0 20px;
+    margin: 0 0 3.5%;
+}
+
+.open_popup {
+    transform: translate(-50%, -50%) scale(1);
+    visibility: visible;
+}
+
+.close_popup {
+    transform: translate(-50%, -50%) scale(0);
+    visibility: hidden;
+}
+
+.labels {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.container_login input {
+    width: 100%;
+    margin-bottom: 25px;
+    color: #fff;
+}
+
+.container_register input[type="email"],
+input[type="password"],
+input[type="text"] {
+    width: 100%;
+    margin-bottom: 25px;
+    color: #fff;
+}
+
+input[type="email"],
+input[type="password"],
+input[type="text"] {
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 50px;
+    transition: 0.2s;
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="text"]:focus {
+    transform: scale(1.02);
+    background-color: #3a3a3a;
+    border-radius: 0.3em;
+}
+
+#terms {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+.sub-btn {
+    text-align: center;
+}
+
+#sub-btn {
+    margin-top: 30px;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #000;
+    border: 2px solid #DD5B45;
+    color: #fff;
+    border-radius: 0.6em;
+    padding: 15px 25px;
+    text-decoration: none;
+    outline: none;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+#sub-btn:hover {
+    transform: scale(1.05);
+    background-color: #DD5B45;
+    color: #000;
+}
+
+#log-btn {
+    margin-top: 30px;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #000;
+    border: 2px solid #DD5B45;
+    color: #DD5B45;
+    border-radius: 0.6em;
+    padding: 15px 25px;
+    cursor: pointer;
+    text-decoration-style: none;
+    outline: none;
+    transition: 0.4s;
+}
+
+#log-btn:hover {
+    transform: scale(1.05);
+    background-color: #DD5B45;
+    color: #000;
+}
